@@ -8,6 +8,6 @@ import kotlinx.serialization.Serializable
  */
 
 @Serializable
-sealed class FirestoreModel {
+abstract class FirestoreModel {
     abstract var id: String // Firestore ID
 }
