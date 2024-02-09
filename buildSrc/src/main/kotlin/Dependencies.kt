@@ -16,6 +16,7 @@ object Dependencies {
         const val annotations = "1.7.1"
         const val coroutines = "1.7.3"
         const val napier = "2.6.1"
+        const val firebase = "1.11.1" // Firebase for KMP https://firebaseopensource.com/projects/gitliveapp/firebase-kotlin-sdk/
 
         object Firebase {
             const val packageName = "com.tweener.firebase"
@@ -72,6 +73,13 @@ object Dependencies {
             object Android {
                 const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
             }
+        }
+
+        object Firebase {
+            const val firestore = "dev.gitlive:firebase-firestore:${Versions.firebase}"
+            const val config = "dev.gitlive:firebase-config:${Versions.firebase}"
+            const val auth = "dev.gitlive:firebase-auth:${Versions.firebase}"
+            const val functions = "dev.gitlive:firebase-functions:${Versions.firebase}"
         }
 
         object Android {

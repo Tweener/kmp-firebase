@@ -78,6 +78,12 @@ kotlin {
 
             // Coroutines
             implementation(Dependencies.Libraries.Coroutines.core)
+
+            // Firebase
+            implementation(Dependencies.Libraries.Firebase.firestore)
+            implementation(Dependencies.Libraries.Firebase.config)
+            api(Dependencies.Libraries.Firebase.auth)
+            implementation(Dependencies.Libraries.Firebase.functions)
         }
 
         androidMain.dependencies {
