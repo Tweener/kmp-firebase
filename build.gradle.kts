@@ -3,6 +3,7 @@ import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
     kotlin("multiplatform").version(Dependencies.Versions.kotlin).apply(false)
+    kotlin("plugin.serialization").version(Dependencies.Versions.kotlin).apply(false)
     id("com.android.library").version(Dependencies.Versions.gradle).apply(false)
     id("org.jetbrains.dokka").version(Dependencies.Versions.dokka).apply(false)
     id("io.github.gradle-nexus.publish-plugin").version(Dependencies.Versions.nexusSonatype)
