@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Kmplate_Library" // TODO change here
-include(":changehere")
+rootProject.name = "kmp-firebase"
+include(":kmp-firebase")

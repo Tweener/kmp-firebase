@@ -1,4 +1,4 @@
-package com.tweener.changehere
+package com.tweener.firebase
 
 class Greeting {
     private val platform: Platform = getPlatform()

@@ -7,15 +7,15 @@ plugins {
 }
 
 android {
-    namespace = Dependencies.Versions.MyProject.namespace
-    compileSdk = Dependencies.Versions.MyProject.compileSDK
+    namespace = Dependencies.Versions.Firebase.namespace
+    compileSdk = Dependencies.Versions.Firebase.compileSDK
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
     defaultConfig {
-        minSdk = Dependencies.Versions.MyProject.minSDK
+        minSdk = Dependencies.Versions.Firebase.minSDK
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -62,7 +62,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "changehere"
+            baseName = "kmp-firebase"
             isStatic = true
         }
     }
@@ -107,8 +107,8 @@ val javadocJar = tasks.create<Jar>("javadocJar") {
     from(dokkaOutputDir)
 }
 
-group = Dependencies.Versions.MyProject.Maven.group
-version = Dependencies.Versions.MyProject.versionName
+group = Dependencies.Versions.Firebase.Maven.group
+version = Dependencies.Versions.Firebase.versionName
 
 publishing {
     publications {
@@ -116,9 +116,9 @@ publishing {
             artifact(javadocJar)
 
             pom {
-                name.set(Dependencies.Versions.MyProject.Maven.name)
-                description.set(Dependencies.Versions.MyProject.Maven.description)
-                url.set(Dependencies.Versions.MyProject.Maven.packageUrl)
+                name.set(Dependencies.Versions.Firebase.Maven.name)
+                description.set(Dependencies.Versions.Firebase.Maven.description)
+                url.set(Dependencies.Versions.Firebase.Maven.packageUrl)
 
                 licenses {
                     license {
@@ -129,21 +129,21 @@ publishing {
 
                 issueManagement {
                     system.set("GitHub Issues")
-                    url.set("${Dependencies.Versions.MyProject.Maven.packageUrl}/issues")
+                    url.set("${Dependencies.Versions.Firebase.Maven.packageUrl}/issues")
                 }
 
                 developers {
                     developer {
-                        id.set(Dependencies.Versions.MyProject.Maven.Developer.id)
-                        name.set(Dependencies.Versions.MyProject.Maven.Developer.name)
-                        email.set(Dependencies.Versions.MyProject.Maven.Developer.email)
+                        id.set(Dependencies.Versions.Firebase.Maven.Developer.id)
+                        name.set(Dependencies.Versions.Firebase.Maven.Developer.name)
+                        email.set(Dependencies.Versions.Firebase.Maven.Developer.email)
                     }
                 }
 
                 scm {
-                    connection.set("scm:git:git://${Dependencies.Versions.MyProject.Maven.gitUrl}")
-                    developerConnection.set("scm:git:ssh://${Dependencies.Versions.MyProject.Maven.gitUrl}")
-                    url.set(Dependencies.Versions.MyProject.Maven.packageUrl)
+                    connection.set("scm:git:git://${Dependencies.Versions.Firebase.Maven.gitUrl}")
+                    developerConnection.set("scm:git:ssh://${Dependencies.Versions.Firebase.Maven.gitUrl}")
+                    url.set(Dependencies.Versions.Firebase.Maven.packageUrl)
                 }
             }
         }

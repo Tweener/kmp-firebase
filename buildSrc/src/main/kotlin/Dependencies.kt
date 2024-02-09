@@ -17,21 +17,19 @@ object Dependencies {
         const val coroutines = "1.7.3"
         const val napier = "2.6.1"
 
-        // TODO Rename MyProject to your project name
-        object MyProject {
-            const val packageName = "com.tweener.changehere" // TODO Change this
+        object Firebase {
+            const val packageName = "com.tweener.firebase"
             const val versionName = "1.0.0"
             const val namespace = "$packageName.android"
             const val compileSDK = 34
             const val minSDK = 24
 
-            // TODO Change all the values in this block to your needs
             object Maven {
-                const val name = "MyKMPLibrary"
-                const val description = "All Tweener commons stuff for Kotlin Multiplatform"
+                const val name = "KMPFirebase"
+                const val description = "A Kotlin Multiplatform library which wraps GitLiveApp Firebase SDK to provide a more straightforward implementation."
                 const val group = "io.github.tweener"
-                const val packageUrl = "https://github.com/Tweener/kmp-common"
-                const val gitUrl = "github.com:Tweener/kmp-common.git"
+                const val packageUrl = "https://github.com/Tweener/kmp-firebase"
+                const val gitUrl = "github.com:Tweener/kmp-firebase.git"
 
                 object Developer {
                     const val id = "Tweener"
