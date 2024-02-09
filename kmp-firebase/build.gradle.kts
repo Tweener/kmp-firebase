@@ -4,6 +4,7 @@ plugins {
     id("org.jetbrains.dokka")
     id("maven-publish")
     id("signing")
+    kotlin("plugin.serialization")
 }
 
 android {
@@ -84,6 +85,8 @@ kotlin {
             implementation(Dependencies.Libraries.Firebase.config)
             api(Dependencies.Libraries.Firebase.auth)
             implementation(Dependencies.Libraries.Firebase.functions)
+
+            implementation(Dependencies.Libraries.KotlinX.serializationJson)
         }
 
         androidMain.dependencies {

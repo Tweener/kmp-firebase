@@ -49,6 +49,10 @@ object Dependencies {
             const val common = "1.0.0"
         }
 
+        object KotlinX {
+            const val serializationJson = "1.6.2"
+        }
+
         object Android {
             const val desugarJdkLibs = "2.0.3"
 
@@ -65,6 +69,10 @@ object Dependencies {
 
         object Tweener {
             const val common = "io.github.tweener:kmp-common:${Versions.Tweener.common}"
+        }
+
+        object KotlinX {
+            const val serializationJson = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.KotlinX.serializationJson}"
         }
 
         object Coroutines {
