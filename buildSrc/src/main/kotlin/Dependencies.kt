@@ -21,7 +21,7 @@ object Dependencies {
 
         object Firebase {
             const val packageName = "com.tweener.firebase"
-            const val versionName = "1.0.0"
+            const val versionName = "1.0.1"
             const val namespace = "$packageName.android"
             const val compileSDK = 34
             const val minSDK = 24
@@ -89,6 +89,7 @@ object Dependencies {
             const val config = "dev.gitlive:firebase-config:${Versions.firebase}"
             const val auth = "dev.gitlive:firebase-auth:${Versions.firebase}"
             const val functions = "dev.gitlive:firebase-functions:${Versions.firebase}"
+            const val crashlytics = "dev.gitlive:firebase-crashlytics:${Versions.firebase}"
         }
 
         object Android {

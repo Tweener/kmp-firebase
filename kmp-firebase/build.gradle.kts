@@ -85,6 +85,7 @@ kotlin {
             implementation(Dependencies.Libraries.Firebase.config)
             api(Dependencies.Libraries.Firebase.auth)
             implementation(Dependencies.Libraries.Firebase.functions)
+            api(Dependencies.Libraries.Firebase.crashlytics)
 
             implementation(Dependencies.Libraries.KotlinX.serializationJson)
         }
