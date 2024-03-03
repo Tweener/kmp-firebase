@@ -1,6 +1,9 @@
+> [!WARNING]
+> This repository is no longer supported or updated. It has been migrated as part of a BoM here: [kmp-firebase](https://github.com/Tweener/kmp-bom/tree/main/kmp-firebase).
+
 # kmp-firebase
 
-kmp-firebase is a Kotlin Multiplaform library which wraps [GitLiveApp Firebase SDK](https://github.com/GitLiveApp/firebase-kotlin-sdk) and provides a more straightforward implementation.
+kmp-firebase is a Kotlin Multiplatform library which wraps [GitLiveApp Firebase SDK](https://github.com/GitLiveApp/firebase-kotlin-sdk) and provides a more straightforward implementation.
 
 ### 💾 Installation
 
@@ -17,7 +20,7 @@ is: [![](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fs01.o
 
 ##### Authentication
 
-Create an instance of `FirebaseAuthDataSource` to perform authenication methods on the device's user:
+Create an instance of `FirebaseAuthDataSource` to perform authentication methods on the device's user:
 
 ```kotlin
 val firebaseAuthDataSource = FirebaseAuthDataSource(firebaseAuthService = FirebaseAuthService())
@@ -106,7 +109,7 @@ assertTrue(response.lastname, "Doe")
 ##### Remote Config
 
 Create an instance of `RemoteConfigDataSource` to retrieve properties set in Firebase Remote Config.
-A `RemoteConfigService(isDebug: Boolean)` is required to initialiaze a `RemoteConfigDataSource`.
+A `RemoteConfigService(isDebug: Boolean)` is required to initialize a `RemoteConfigDataSource`.
 When `isDebug` property is **false**, the library will fetch Remote Config properties **every hour**. When `isDebug` property is **true**, we force the fetch of properties **every 10 seconds**.
 
 ```kotlin
@@ -125,7 +128,7 @@ val defaultRequestTimeoutInSeconds: Long = remoteConfigDataSource.getLong(key = 
 
 ##### Crashlytics
 
-Create an instance of `CrashlyticsService` to access Firebase Crashlytic.
+Create an instance of `CrashlyticsService` to access Firebase Crashlytics.
 
 ```kotlin
 val crashlyticsService = CrashlyticsService()
